@@ -2,7 +2,7 @@ a = 7
 b = 2
 
 # addition
-print ('Sum: ' + a + b)  
+print ('Sum: ' , a + b)  
 
 # subtraction
 print ('Subtraction: ', a - b)   
