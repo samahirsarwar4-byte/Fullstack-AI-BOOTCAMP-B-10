@@ -19,44 +19,44 @@ Setting Themes
 The seaborn.set_theme() or seaborn.set_style() function can be used to set the theme for all plots. """
 
 # Sample data
-data = pd.DataFrame({'x': np.arange(100), 'y': np.random.rand(100).cumsum()})
+# data = pd.DataFrame({'x': np.arange(100), 'y': np.random.rand(100).cumsum()})
 
-# Set the theme
-sns.set_theme(style='darkgrid')
-# Alternatively
-# sns.set_style('darkgrid')
+# # Set the theme
+# sns.set_theme(style='darkgrid')
+# # Alternatively
+# # sns.set_style('darkgrid')
 
-# Create a plot
-sns.lineplot(x='x', y='y', data=data)
-plt.show()
+# # Create a plot
+# sns.lineplot(x='x', y='y', data=data)
+# plt.show()
 
-# Other themes can be set similarly
-sns.set_theme(style='whitegrid')
-sns.lineplot(x='x', y='y', data=data)
-plt.show()
+# # Other themes can be set similarly
+# sns.set_theme(style='whitegrid')
+# sns.lineplot(x='x', y='y', data=data)
+# plt.show()
 
-sns.set_theme(style='dark')
-sns.lineplot(x='x', y='y', data=data)
-plt.show()
+# sns.set_theme(style='dark')
+# sns.lineplot(x='x', y='y', data=data)
+# plt.show()
 
-sns.set_theme(style='white')
-sns.lineplot(x='x', y='y', data=data)
-plt.show()
+# sns.set_theme(style='white')
+# sns.lineplot(x='x', y='y', data=data)
+# plt.show()
 
-sns.set_theme(style='ticks')
-sns.lineplot(x='x', y='y', data=data)
-plt.show()
+# sns.set_theme(style='ticks')
+# sns.lineplot(x='x', y='y', data=data)
+# plt.show()
 
 
-"""Customizing Themes
-It is possible to customize the themes further by passing a dictionary of parameters to the rc argument of seaborn.set_theme() or seaborn.set_style(). This allows for fine-grained control over the appearance of plots."""
+# """Customizing Themes
+# It is possible to customize the themes further by passing a dictionary of parameters to the rc argument of seaborn.set_theme() or seaborn.set_style(). This allows for fine-grained control over the appearance of plots."""
 
-# Customize the theme
-sns.set_theme(style='darkgrid', rc={'axes.facecolor': 'grey', 'grid.color': 'white'})
+# # Customize the theme
+# sns.set_theme(style='darkgrid', rc={'axes.facecolor': 'grey', 'grid.color': 'white'})
 
-# Create a plot
-sns.lineplot(x='x', y='y', data=data)
-plt.show()
+# # Create a plot
+# sns.lineplot(x='x', y='y', data=data)
+# plt.show()
 
 """seaborn.set_theme() allows customization of the appearance of plots by modifying matplotlib's rc parameters. It accepts a dictionary rc to override default settings. Here's a breakdown of commonly used rc parameters:
 axes.facecolor: Background color of the plotting area (e.g., 'white', '#EAEAF2').
@@ -156,6 +156,7 @@ read = input("Wait for me....")
 # See: https://seaborn.pydata.org/generated/seaborn.histplot.html#seaborn.histplot
 """Plot univariate or bivariate histograms to show distributions of datasets.
 A histogram is a classic visualization tool that represents the distribution of one or more variables by counting the number of observations that fall within discrete bins."""
+
 g = sns.histplot(data=dffilter, x='agency', y='price', hue='agency', multiple="stack")
 g.figure.suptitle("sns.histplot(data=dffilter, x='agency', y='price', hue='agency', multiple=stack)"  )
 # Display the plot
